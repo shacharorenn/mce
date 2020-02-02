@@ -1,0 +1,31 @@
+{
+  "name": "mce",
+  "version": "1.0.0",
+  "description": "MCE project",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon --watch server.js",
+    "build": "npm run --prefix=client build",
+    "client": "npm start --prefix=client",
+    "dev": "run-p server client",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shacharorenn/mce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shacharorenn/mce/issues"
+  },
+  "homepage": "https://github.com/shacharorenn/mce#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5"
+  }
+}

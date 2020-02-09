@@ -1,20 +1,21 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+var usb = require('usb');
+var tree = usb.getDeviceList();
+const app = express();
 const path = require('path');
-const port = 9000
-
-// TODO: 
-const data = {message: 'idan',
-array: [
-    'a', 'b', 'c'
-]}
+const port = 9000;
 
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
-app.get('/api/data', (req, res) =>
-    res.json(data))
+app.get('/api/data', (req, res) => 
+    {
+        tree = usb.getDeviceList();
+        res.json(tree)
+    }
+)
 
+ console.log(tree);
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

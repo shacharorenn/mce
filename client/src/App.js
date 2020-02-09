@@ -1,12 +1,12 @@
-import React from 'react';
-import './App.css';
+import React, { useDebugValue } from 'react';
+import './style.scss'
 
 let i = 0;
 
 class App extends React.Component {
 
   state = {
-    data: {array: []}
+    data: []
   }
 
   componentWillMount() {
@@ -21,11 +21,20 @@ class App extends React.Component {
     console.log('render', i);
     return (
       <>
-        <ul>
-          {this.state.data.array.map((value, i) =>
-            <li key={i}>{value}</li>)}
-        </ul>
-        {this.state.data.array}
+      <main>
+       <ol class="gradient-list">  
+          {this.state.data.map((value, i) =>
+            <li key={i}>
+              <ul class="list-group"> 
+                <li class="list-group-item list-group-item-primary">idVendor is: {value.deviceDescriptor.idVendor}</li>
+                <li class="list-group-item list-group-item-secondary">idProduct is: {value.deviceDescriptor.idProduct}</li>
+                <li class="list-group-item list-group-item-success">parent is: {value.parent}</li>
+              </ul>
+            </li>
+          )}
+        </ol>
+        </main>
+        {/* {this.state.data} */}
       </>
 
     );

@@ -17,5 +17,4 @@ app.get('/api/data', (req, res) =>
     }
 )
 
- console.log(tree);
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

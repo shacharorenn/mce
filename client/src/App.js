@@ -1,7 +1,5 @@
-import React, { useDebugValue } from 'react';
+import React from 'react';
 import './style.scss'
-
-let i = 0;
 
 class App extends React.Component {
 
@@ -16,9 +14,6 @@ class App extends React.Component {
   }
 
   render() {
-    let res = null;
-    i++;
-    console.log('render', i);
     return (
       <>
       <main>

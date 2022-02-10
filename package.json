@@ -24,7 +24,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "usb": "^1.6.2"
   },
   "devDependencies": {

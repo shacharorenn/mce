@@ -23,7 +23,7 @@
   "homepage": "https://github.com/shacharorenn/mce#readme",
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "node-sass": "^4.13.1",
     "usb": "^1.6.2"
   },
